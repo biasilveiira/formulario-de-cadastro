@@ -179,9 +179,3 @@ button:hover {
   }
 }
 
- label::after {
- content "Opa";
-font-size:12px;
-display: flex;
-
-}
