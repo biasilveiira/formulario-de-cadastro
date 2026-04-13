@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscrição - UTFPR Tech Week</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <header class="page-header">
+        <img
+          src="./img/UTFPR - Identidade Visual.png"
+          alt="Logo UTFPR"
+          class="logo"
+        />
+        <div>
+          <p class="subtitle">Inscrição oficial para a UTFPR Tech Week</p>
+          <h1 class="titulo">Participe do evento de tecnologia</h1>
+        </div>
+      </header>
+      <form class="form-card" action="#" method="post">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <label for="nome">Nome Completo:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            minlength="5"
+            pattern="[A-Za-zÀ-ÿ\s]+"
+            title="Apenas letras e espaços são permitidos"
+          />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="nascimento">Data de Nascimento:</label>
+          <input
+            type="date"
+            id="nascimento"
+            name="nascimento"
+            required
+            max="2026-04-13"
+          />
+
+          <label for="convidados">Quantidade de Convidados:</label>
+          <input
+            type="number"
+            id="convidados"
+            name="convidados"
+            required
+            min="0"
+            max="5"
+          />
+
+          <label for="url">URL do Portfólio:</label>
+          <input
+            type="url"
+            id="url"
+            name="url"
+            placeholder="https://seu-portfolio.com"
+            title="Digite a URL completa do seu portfólio"
+          />
+
+          <label for="senha">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            required
+            minlength="8"
+          />
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            required
+            pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+            title="Formato: (00) 00000-0000"
+            placeholder="(11) 99999-9999"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do Evento</legend>
+          <label for="curso">Curso/Área de Interesse:</label>
+          <select id="curso" name="curso" required>
+            <option value="">Selecione</option>
+            <option value="engenharia">Engenharia</option>
+            <option value="computacao">Computação</option>
+            <option value="design">Design</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <label for="motivo">Motivo da Inscrição:</label>
+          <textarea
+            id="motivo"
+            name="motivo"
+            rows="4"
+            required
+            minlength="10"
+            maxlength="1000"
+            placeholder="Descreva brevemente seu interesse no evento"
+          ></textarea>
+
+          <div class="checkbox-group">
+            <label for="termos">
+              <input type="checkbox" id="termos" name="termos" required />
+              Aceito os termos e condições.
+            </label>
+          </div>
+          <div class="checkbox-group">
+            <label for="marketing">
+              <input type="checkbox" id="marketing" name="marketing" />
+              Aceito receber emails e promoções.
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Inscrever-se</button>
+      </form>
+    </main>
+  </body>
+</html>

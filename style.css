@@ -1,0 +1,187 @@
+:root {
+  --bg-light: #fff9e7;
+  --bg-soft: rgba(255, 255, 255, 0.95);
+  --surface: #fff7e2;
+  --border: rgba(145, 127, 78, 0.25);
+  --accent: #4d7b3f;
+  --accent-strong: #3f6c38;
+  --text: #2f2f2f;
+  --muted: #41403d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 213, 99, 0.55) 40%,
+    #ffd563 100%
+  );
+  color: var(--text);
+}
+.page-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.logo {
+  width: 88px;
+  min-width: 72px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+}
+.subtitle {
+  margin: 0 0 6px;
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.titulo {
+  margin: 0;
+  font-size: clamp(2rem, 2.4vw, 2.4rem);
+  line-height: 1.05;
+}
+.form-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.09);
+}
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  margin-bottom: 24px;
+  padding: 28px 24px;
+  background: rgba(255, 255, 255, 0.92);
+}
+legend {
+  font-size: 1rem;
+  color: var(--accent-strong);
+  font-weight: 700;
+  padding: 0 10px;
+}
+label {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(145, 159, 85, 0.35);
+  border-radius: 14px;
+  background: #ffffff;
+  color: #2c2c2c;
+  font: inherit;
+  box-sizing: border-box;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 5px rgba(76, 175, 80, 0.14);
+}
+::placeholder {
+  color: #a39060;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 18px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+button {
+  width: 100%;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 12px 28px rgba(79, 120, 60, 0.18);
+}
+button:hover {
+  background-color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+@media (max-width: 680px) {
+  .page-container {
+    padding: 22px 16px 32px;
+  }
+  .page-header {
+    gap: 14px;
+  }
+  .form-card {
+    padding: 24px;
+  }
+  fieldset {
+    padding: 22px 20px;
+  }
+}
+@media (max-width: 440px) {
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+ label::after {
+ content "Opa";
+font-size:12px;
+display: flex;
+
+}
